@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bartender: Welcome</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="welcome.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- --------------------------------------navbar --------------------------------->
+    <nav class="navbar pb-4 navbar-expand-lg navbar-dark justify-content-end fixed-top">
+        <div class="container-fluid justify-content-end">
+            <a class="navbar-brand" href="/Bartender/Welcome/welcome.html"><span class="material-symbols-outlined">
+                    local_bar
+                </span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="objective.html">Objective</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="meet-the-team.html">Meet the Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="future-state.html">Future State</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- --------------------------------------------End of navbar ------------------------------->
+
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4">
+            <img src="Bartender.jpg" alt="female bartender" class="img-fluid">
+          </div>
+          <div class="col-md-8">
+            <h1 class="italiana-heading">Barkeep</h1>
+            <div id="drinkName" class="italiana-drinkName"></div>
+            <div id="drinkImg"></div>
+            <div class="italiana-instructions">What are you in the mood for? Enter an ingredient, we'll do the rest</div>
+            <input id="user-input" class="italiana-input" type="text">
+            <section class="button-container">
+                <button id="drinkBtn" class="italiana-button" type="submit">Fetch Drink</button>
+            </section>
+                
+          </div>
+        </div>
+      </div>
+    
+    <!-- <div class="container-fluid">
+        <section class="img-container">
+            <img src="Bartender.jpg" alt="female bartender">
+        </section>
+        <section>
+            <div id="drinkName"></div>
+            <div id="drinkImg"></div>
+            <input id="user-input" type="text">
+            <button id="drinkBtn">Fetch Drink</button>
+        </section>
+    </div> -->
+    <script src="welcome.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
