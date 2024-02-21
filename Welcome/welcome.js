@@ -16,9 +16,10 @@ async function fetchDrink(){
         let data = await response.json();
         let index = Math.floor(Math.random() * data.drinks.length)
         displayDrink(data.drinks[index])
-        console.log(data.drinks[index])
     }catch(error){
         console.error('Error fetching drink', error);
+        alert("We couldn't find that ingredient, try something else");
+        userInput.value = ''
     }
 }
 
@@ -39,16 +40,32 @@ function displayDrink(drink){
 }
 
 function tellMeMore(){
-    drinkBtn.disabled = true;
+    userInput.disabled = true;
+    //turn fetch button into reset button
+    drinkBtn.textContent = 'Start Over'
+    drinkBtn.removeEventListener('click', fetchDrink)
+    drinkBtn.addEventListener('click', refresh)
+
+    // generate 'tell me more' button
     let newButton = document.createElement('button');
         newButton.textContent = 'Tell me more';
         newButton.classList.add('italiana-button');
         newButton.id = 'tellMeMore'
         document.querySelector('.button-container').appendChild(newButton);
+
+        document.getElementById('tellMeMore').addEventListener('click', function(event) {
+            if (event.target.id === 'tellMeMore') {
+                window.location.href = '/bartender/game/bartender.html';
+            }
+        })
 }
 
-let tellmeMoreBtn = document.getElementById('tellMeMore');
+function refresh(){
+    //user clicks 'start over' and goes back to start
+    window.location.reload();
+    userInput.value = ''
+}
 
-tellmeMoreBtn.addEventListener('click', function(){
-    window.location.src = '/bartender/Game/bartender.html'
-})
+// document.getElementById('tellMeMore').addEventListener('click', () => {
+//     window.location.href = '/bartender/game/bartender.html';
+// })
