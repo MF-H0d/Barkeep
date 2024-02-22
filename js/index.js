@@ -55,8 +55,9 @@ function tellMeMore(){
 
         document.getElementById('tellMeMore').addEventListener('click', function(event) {
             if (event.target.id === 'tellMeMore') {
-                window.location.href = '/bartender/game/bartender.html';
+                window.location.href = 'bartender-game.html';
             }
+            console.log(event)
         })
 }
 
